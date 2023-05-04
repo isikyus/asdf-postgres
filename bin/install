@@ -26,6 +26,7 @@ install_postgres() {
     local configure_options="$(construct_configure_options)"
 
     echo "Building with options: $configure_options"
+    echo "in $source_path"
     ./configure $configure_options || exit 1
     make || exit 1
     make install || exit 1
